@@ -513,19 +513,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            margin: 25px 0;
+            gap: 12px;
+            margin: 20px 0;
             flex-wrap: wrap;
         }
         
         .flow-step {
             background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 15px 20px;
+            padding: 12px 15px;
             border-radius: 12px;
             text-align: center;
             border: 2px solid #667eea30;
             transition: var(--transition-smooth);
-            min-width: 120px;
+            min-width: 110px;
+            max-width: 140px;
         }
         
         .flow-step:hover {
@@ -535,15 +536,22 @@
         }
         
         .flow-icon {
-            font-size: 2em;
-            margin-bottom: 8px;
+            font-size: 1.8em;
+            margin-bottom: 5px;
         }
         
-        .flow-text {
-            font-weight: 600;
+        .flow-title {
+            font-weight: 700;
             color: #2c3e50;
-            font-size: 0.95em;
+            font-size: 0.9em;
             font-family: 'Rubik', sans-serif;
+            margin-bottom: 3px;
+        }
+        
+        .flow-desc {
+            font-size: 0.75em;
+            color: #6c757d;
+            line-height: 1.3;
         }
         
         .flow-arrow {
@@ -764,26 +772,31 @@
             }
             
             .approach-flow {
-                flex-direction: column;
-                gap: 10px;
+                gap: 8px;
+                margin: 15px 0;
             }
             
             .flow-step {
-                width: 100%;
-                padding: 12px 15px;
+                padding: 10px 12px;
+                min-width: 90px;
+                max-width: 120px;
             }
             
             .flow-icon {
                 font-size: 1.5em;
-                margin-bottom: 5px;
+                margin-bottom: 4px;
             }
             
-            .flow-text {
-                font-size: 0.85em;
+            .flow-title {
+                font-size: 0.8em;
+                margin-bottom: 2px;
+            }
+            
+            .flow-desc {
+                font-size: 0.65em;
             }
             
             .flow-arrow {
-                transform: rotate(90deg);
                 font-size: 1.5em;
             }
             
@@ -868,6 +881,21 @@
             
             .about-text p {
                 font-size: 0.8em;
+            }
+            
+            /* Make flow vertical on very small screens */
+            .approach-flow {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .flow-step {
+                width: 100%;
+                max-width: none;
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
             }
         }
         
@@ -1203,17 +1231,20 @@
                             <div class="approach-flow">
                                 <div class="flow-step">
                                     <div class="flow-icon">📋</div>
-                                    <div class="flow-text">הבנת האתגרים</div>
+                                    <div class="flow-title">פתיחה</div>
+                                    <div class="flow-desc">הבנת האתגרים והתאמת התוכן</div>
                                 </div>
-                                <div class="flow-arrow">→</div>
+                                <div class="flow-arrow">←</div>
                                 <div class="flow-step">
                                     <div class="flow-icon">💡</div>
-                                    <div class="flow-text">פתרון מודרך</div>
+                                    <div class="flow-title">מהלך השיעור</div>
+                                    <div class="flow-desc">פתרון מודרך עם דגשים</div>
                                 </div>
-                                <div class="flow-arrow">→</div>
+                                <div class="flow-arrow">←</div>
                                 <div class="flow-step">
                                     <div class="flow-icon">✅</div>
-                                    <div class="flow-text">סיכום ותרגול</div>
+                                    <div class="flow-title">סיכום</div>
+                                    <div class="flow-desc">חזרה ושיעורי בית</div>
                                 </div>
                             </div>
                             
